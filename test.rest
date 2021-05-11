@@ -1,0 +1,33 @@
+### Test encode with default delimeter
+GET http://localhost:8000/translate/to
+Content-Type: application/json
+
+{
+    "text": "test"
+}
+
+### Test encode with non default delimeter
+GET http://localhost:8000/translate/to
+Content-Type: application/json
+
+{
+    "text": "test",
+    "delim": "!"
+}
+
+### Test decode with default delimeter
+GET http://localhost:8000/translate/from
+Content-Type: application/json
+
+{
+    "text": "HHHhHhh HHhhHhH HHHhhHH HHHhHhh"
+}
+
+### Test decode with non default delimeter
+GET http://localhost:8000/translate/from
+Content-Type: application/json
+
+{
+    "text": "HHHhHhh!HHhhHhH!HHHhhHH!HHHhHhh",
+    "delim": "!"
+}
